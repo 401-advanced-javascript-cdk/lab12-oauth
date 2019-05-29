@@ -1,11 +1,9 @@
 'use strict';
 
 const superagent = require('superagent');
-const Users = require('../users-model.js.js');
+const Users = require('../users-model.js');
 
 let authorize = (request) => {
-  
-  console.log('(1)', request.query.code);
   
   return superagent.post(process.env.GITHUB_TOKEN_URI)
     .type('form')
@@ -28,7 +26,6 @@ let authorize = (request) => {
         });
     })
     .then(githubUser => {
-      console.log('(4) Create Our Account');
       return Users.createFromOauth(githubUser.email);
     })
     .then( actualUser => {
