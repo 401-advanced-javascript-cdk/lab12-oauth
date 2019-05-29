@@ -1,9 +1,7 @@
 'use strict';
 
 const superagent = require('superagent');
-const Users = require('../users-model.js');
-
-const API = 'http://localhost:3000';
+const Users = require('../users-model.js.js');
 
 let authorize = (request) => {
   
@@ -15,7 +13,7 @@ let authorize = (request) => {
       code: request.query.code,
       client_id: process.env.GITHUB_CLIENT_ID,
       client_secret: process.env.GITHUB_CLIENT_SECRET,
-      redirect_uri: `${API}/oauth/github`,
+      redirect_uri: `${process.env.API}/oauth/github`,
     })
     .then(tokenResponse => {
       let githubToken = tokenResponse.body.access_token;
