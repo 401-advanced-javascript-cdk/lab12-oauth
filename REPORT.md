@@ -9,6 +9,7 @@
 #### Score (Out of 10): 
 
 #### General Comments
+Below is a process flow diagram for how information is being shared between different servers and websites. 
 
 ![UML](image.png)
 
