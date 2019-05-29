@@ -1,49 +1,103 @@
 # OAuth Comparative Analysis
 
-## OAuth Provider Name 
+## GitHub OAuth
 
-### Research Conducted By: Student Names
+### Research Conducted By: Chris Kozlowski, Melissa Stock, Jagdeep Singh
 
 ### Overall Score and Comments
-#### Score (Out of 10): 7
+
+#### Score (Out of 10): 
+
 #### General Comments
-Describe the stack (front-end only? full stack?), database, efficiency, etc. Describe the general usability and learnability
+
+![]()
+
+
+
+
 
 #### Pros
-* Item 1
-* Item 2
+
+- Great, easy to follow docs
+- Great if target market is developers
 
 #### Cons
-* Item 1
-* Item 2
+
+- Implicit grant type not supported
+- Small user base
+- Limited personal information on user
+
+
 
 ### Ratings and Reviews
+
 #### Documentation
-Thoughts go here
+
+- Very high-level introduction to OAuth 
+
+- very clear on requirements. 
+
+- great examples that include terminal commands
+
+
 
 #### Systems Requirements
+
 Above and beyond 'node' and 'linux', what dependencies or core requirements exist for this framework?  Can it play at AWS/Heroku?  Does it require a certain database?
 
+
+
+No system requirements, 
+
+Uses mongo database to store user data but any database can be used.
+
+
+
 #### Ramp-Up Projections
+
 How long would/should it take a team of mid-junior developers to become productive?
 
+~2 hours to get an understanding of the OAuth process and get to work.
+
+
+
 #### Community Support and Adoption levels
+
 How popular is this framework? What big companies are running on it? How is it "seen" in the general JS community?  Is there an active community of developers supporting and growing it?
 
 
+
+Any big or small tech company uses it, such as Travis, Amazon, Wordpress, Swagger, Heroku, npm, etc.
+
+
+
+Very popular in the tech community. Very active community with over 37 million users.
+
+
+
 ### Links and Resources
-* [framework](http://xyz.com)
-* [docs](http://xyz.com)
-* [examples/tutorials](http://xyz.com)
+
+- [docs](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
+- [examples/tutorials](https://developer.github.com/v3/guides/basics-of-authentication/)
 
 ### Code Demos
-* [live/running application](http://xyz.com)
-* [code repository](http://xyz.com)
+
+- [live/running application](http://xyz.com)
+- [code repository](https://github.com/401-advanced-javascript-cdk/lab12-oauth/tree/master/auth-server)
 
 ### Operating Instructions
+
 If someone were to download your repo (above), what steps do they need to take to run the application
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+
+- Create a github application ([link](https://github.com/settings/applications/new))
+  - save `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` in .env file
+- In .env file, set the following variables:
+  - `GITHUB_AUTH_URI=https://github.com/login/oauth/authorize`
+  - `GITHUB_TOKEN_URI=https://github.com/login/oauth/access_token`
+  - `GITHUB_USER_URI=https://api.github.com/user`
+- `npm start`
+
+- Endpoint: `/foo/bar/`
+  - Returns a JSON object with abc in it.
+- Endpoint: `/bing/zing/`
+  - Returns a JSON object with xyz in it.
