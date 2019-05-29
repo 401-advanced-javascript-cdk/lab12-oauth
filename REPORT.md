@@ -97,7 +97,4 @@ If someone were to download your repo (above), what steps do they need to take t
   - `GITHUB_USER_URI=https://api.github.com/user`
 - `npm start`
 
-- Endpoint: `/foo/bar/`
-  - Returns a JSON object with abc in it.
-- Endpoint: `/bing/zing/`
-  - Returns a JSON object with xyz in it.
+- Endpoint: `/localhost:8080`
