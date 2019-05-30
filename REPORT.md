@@ -6,13 +6,12 @@
 
 ### Overall Score and Comments
 
-#### Score (Out of 10): 
+#### Score (Out of 10): 8
 
 #### General Comments
 Below is a process flow diagram for how information is being shared between different servers and websites. 
 
 ![UML](image.png)
-
 
 
 
@@ -50,7 +49,7 @@ Above and beyond 'node' and 'linux', what dependencies or core requirements exis
 
 No system requirements, 
 
-Uses mongo database to store user data but any database can be used.
+Used mongo database to store user data but any database can be used.
 
 
 
